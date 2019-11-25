@@ -22,7 +22,7 @@ public class Person {
 
     private List<Object> lists;
 
-    private Dog dogs;
+    private Dog dog;
 
     @Override
     public String toString() {
@@ -33,7 +33,7 @@ public class Person {
                 ", birth=" + birth +
                 ", maps=" + maps +
                 ", lists=" + lists +
-                ", dogs=" + dogs +
+                ", dog=" + dog +
                 '}';
     }
 
@@ -85,11 +85,11 @@ public class Person {
         this.lists = lists;
     }
 
-    public Dog getDogs() {
-        return dogs;
+    public Dog getDog() {
+        return dog;
     }
 
-    public void setDogs(Dog dogs) {
-        this.dogs = dogs;
+    public void setDog(Dog dog) {
+        this.dog = dog;
     }
 }

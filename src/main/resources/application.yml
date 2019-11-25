@@ -1,9 +1,23 @@
 server:
   port: 8081
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 8083
+spring:
+  profiles: dev
+---
+server:
+  port: 8084
+spring:
+  profiles: prod
+---
 
 person:
-  name: zhangsan
-  age: 18
+  name: zhangsan${random.uuid}
+  age: ${random.int}
   boss: false
   birth: 2010/10/06
   maps: {k1: v1, k2: v2}
@@ -11,5 +25,6 @@ person:
     - lisi
     - zhaoliu
   dog:
-    name: xiaogou
-    age: 2
+    name: ${person.name}_xiaogou
+    age: ${person.hello:5}
+
